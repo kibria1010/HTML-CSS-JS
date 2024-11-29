@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Title Name</title>
+    <meta name="w3school" content="HTML, CSS, JavaScript">
+    <!--External CSS-->
+    <!--
+    <link rel="stylesheet" href="/html/styles.css"> 
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css"> 
+    -->
+    <style>
+        .wrapper {
+            text-align: left;
+        }
+
+        .centered {
+            display: inline-block;
+            /* Treat as inline element */
+            border: 2px solid rgb(24, 24, 47);
+            margin-left: 5px;
+            padding-left: 10px;
+            width: 99%;
+            height: 25%;
+        }
+
+        .city {
+            background-color: rgb(95, 173, 188);
+        }
+
+        #C10 {
+            color: #D6EEEE;
+        }
+
+        body {
+            background-color: rgb(210, 220, 222);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementsByClassName("city");
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+        }
+
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Have a nice day..!";
+            document.getElementById("myHeader").style.backgroundColor = "yellow";
+            document.getElementById("myHeader").style.fontSize = "25px";
+        }
+
+        function light(sw) {
+            var pic;
+            if (sw == 0) {
+                pic = "pic_bulboff.gif"
+            } else {
+                pic = "pic_bulbon.gif"
+            }
+            document.getElementById('myImage').src = pic;
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to <span style="border: 1px solid black">Hello World</span>My Website</h1>
+        <nav>
+
+            <ul>
+                <li> <a href="#home">Home</a> </li>
+                <li> <a href="#about">About</a> </li>
+                <li> <a href="#contact">Contact</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="wrapper">
+
+        <div class="centered">
+
+            <article>
+                <h1>Image</h1>
+                <img src="me.png" alt="Image not found" width="100" height="100">
+            </article>
+            <hr>
+            <article>
+                <h3>link</h3>
+                <a href="#">Visit Example</a> <br>
+                <a href="#" title="Visit Example">Example</a> <br>
+                <a href="#" target="_blank">Open in New Tab</a> <br>
+
+                /*Image as a link*/
+                <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_image"><img src="me.png"
+                        alt="HTML tutorial" style="width:42px;height:42px;"></a>
+                <button
+                    onclick="document.location='https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_image'">HTML
+                    Tutorial</button>
+                <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML
+                    Tutorial</a>
+            </article>
+            <hr>
+            <article>
+                <h3>Style</h3>
+                <p
+                    style="text-align:center; color:red; background-color:powderblue; font-family:courier; font-size:200%;">
+                    I am red </p>
+            </article>
+            <hr>
+            <article>
+                <h3>Formatting Elements</h3>
+                <b>This text is bold</b>
+                <strong>This text is important!</strong>
+                <i>This text is italic</i>
+                <em>This text is emphasized</em>
+                <small>This is some smaller text.</small>
+                <p>Do not forget to buy <mark>milk</mark> today.</p>
+                <p>My favorite color is <del>blue</del> red.</p>
+                <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+                <p>This is <sub>subscripted</sub> text.</p>
+                <p>This is <sup>superscripted</sup> text.</p>
+            </article>
+            <hr>
+            <article>
+                <h3>Quotation</h3>
+                <p>Here is a quote from WWF's website:</p>
+                <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    For 60 years, WWF has worked to help people and nature thrive.
+                </blockquote>
+                <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+                <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+                <address>
+                    Written by John Doe.<br>
+                    Visit us at:<br>
+                </address>
+                <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+                <bdo dir="rtl">This text will be written from right to left</bdo>
+            </article>
+            <hr>
+            <article>
+                <h1 style="border:2px solid Violet; background-color: aliceblue;">Color</h1>
+            </article>
+            <hr>
+            <article>
+                <h1>Table</h1>
+                <table style="width:100%">
+                    <tr style="text-align: center;">
+                        <th>Company</th>
+                        <th>Contact</th>
+                        <th>Country</th>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                    </tr>
+                    <tr>
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                    </tr>
+                </table>
+            </article>
+
+            <hr>
+            <article>
+                <h1>Table</h1>
+
+                <table style="width:100%; border-collapse: collapse;">
+                    <caption>Details</caption>
+                    <colgroup>
+                        <col span="2" style="background-color: #D6EEEE">
+                    </colgroup>
+                    <tr style="text-align: center;">
+                        <th>Person 1</th>
+                        <th style="width: 50%;">Person 2</th>
+                        <th>Person 3</th>
+                    </tr>
+                    <tr style="height:50px">
+                        <td>Emil</td>
+                        <td>Tobias</td>
+                        <td>Linus</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>14</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+            </article>
+            <hr>
+
+            <article>
+                <h2>A Description List</h2>
+                <dl>
+                    <dt>Coffee</dt>
+                        <dd>- black hot drink</dd>
+                    <dt>Milk</dt>
+                        <dd>- white cold drink</dd>
+                </dl>
+            </article>
+            <hr>
+
+            <article>
+                <button onclick="myFunction()">Hide elements</button>
+                <h2 class="city">London</h2>
+                <p>London is the capital of England.</p>
+
+                <h2 class="city">Paris</h2>
+                <p>Paris is the capital of France.</p>
+
+                <h2 class="city">Tokyo</h2>
+                <p>Tokyo is the capital of Japan.</p>
+
+                <h1 id="myHeader">Hello World!</h1>
+                <button onclick="displayResult()">Change text</button>
+
+                <hr>
+
+                <p><a href="#C10">Jump to Chapter 10</a></p>
+                <h2>Chapter 1</h2>
+                <p>This chapter explains ba bla bla</p>
+
+                <h2>Chapter 2</h2>
+                <p>This chapter explains ba bla bla</p>
+
+                <h2>Chapter 3</h2>
+                <p>This chapter explains ba bla bla</p>
+
+                <h2>Chapter 4</h2>
+                <p>This chapter explains ba bla bla</p>
+
+                <h2>Chapter 5</h2>
+                <p>This chapter explains ba bla bla</p>
+
+                <h2>Chapter 6</h2>
+                <p>This chapter explains ba bla bla</p>
+
+                <h2>Chapter 7</h2>
+                <p>This chapter explains ba bla bla</p>
+
+                <h2>Chapter 8</h2>
+                <p>This chapter explains ba bla bla</p>
+
+                <h2>Chapter 9</h2>
+                <p>This chapter explains ba bla bla</p>
+
+                <h2 id="C10">Chapter 10</h2>
+                <p>This chapter explains ba bla bla</p>
+            </article>
+
+            <hr>
+
+            <article>
+                <h1>My First JavaScript</h1>
+
+                <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+                    Click me to display Date and Time.
+                </button>
+
+                <p id="demo"></p>
+            </article>
+            <hr>
+
+            <article>
+                <img id="myImage" src="pic_bulboff.gif" width="100" height="180">
+                <p>
+                    <button type="button" onclick="light(1)">Light On</button>
+                    <button type="button" onclick="light(0)">Light Off</button>
+                </p>
+            </article>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:info@example.com">info@example.com</a></p>
+    </footer>
+
+</body>
+
+</html>
